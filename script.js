@@ -1,4 +1,4 @@
-const text = "Hey, this is my website :)";
+const text = "hey, this is my website :)";
 let index = 0;
 const speed = 100; // typing speed (ms)
 const typingText = document.getElementById('typingText');
