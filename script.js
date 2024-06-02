@@ -9,7 +9,7 @@ function typeWriter() {
         index++;
         setTimeout(typeWriter, speed);
     } else {
-        typingText.innerHTML += '<span id="cursor">|</span>';
+        typingText.innerHTML += '<span id="cursor"></span>';
     }
 }
 
