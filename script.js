@@ -1,4 +1,4 @@
-const text = "We are live and online. Stay tuned for more updates!";
+const text = "Hey, this is my website :)";
 let index = 0;
 const speed = 100; // typing speed (ms)
 const typingText = document.getElementById('typingText');
