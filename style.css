@@ -30,13 +30,19 @@ h1 {
     word-wrap: break-word; /* Allows breaking words if needed */
 }
 
-.ascii-art {
-    font-size: 1vw; /* Adjust this to make the text size responsive */
+#ascii-art {
+    font-size: 1vw;
     line-height: 1.2em;
     white-space: pre-wrap; /* Allows text to wrap automatically */
     word-wrap: break-word; /* Allows breaking words if needed */
     text-align: left;
     overflow-x: auto; /* Adds horizontal scroll if the content overflows */
+    display: none; /* Hide original ASCII art after rendering to image */
+}
+
+#ascii-image {
+    max-width: 100%;
+    height: auto;
 }
 
 @media (max-width: 768px) {
@@ -52,7 +58,7 @@ h1 {
         padding: 15px 30px;
     }
 
-    .ascii-art {
+    #ascii-art {
         font-size: 2vw;
     }
 }
@@ -70,7 +76,7 @@ h1 {
         padding: 10px 20px;
     }
 
-    .ascii-art {
+    #ascii-art {
         font-size: 3vw;
     }
 

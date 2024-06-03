@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pat's Network</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
 </head>
 <body>
     <div class="container">
-        <pre class="ascii-art">
+        <pre id="ascii-art">
                      $$\                              $$\                                       $$\       
                      $$ |                             $$ |                                      $$ |      
- $$$$$$\   $$$$$$\ $$$$$$\       $$$$$$$\   $$$$$$\ $$$$$$\   $$\  $$\  $$\  $$$$$$\   $$$$$$\  $$ |  $$\ 
+$$$$$$\   $$$$$$\ $$$$$$\       $$$$$$$\   $$$$$$\ $$$$$$\   $$\  $$\  $$\  $$$$$$\   $$$$$$\   $$ |  $$\ 
 $$  __$$\  \____$$\\_$$  _|      $$  __$$\ $$  __$$\\_$$  _|  $$ | $$ | $$ |$$  __$$\ $$  __$$\ $$ | $$  |
 $$ /  $$ | $$$$$$$ | $$ |        $$ |  $$ |$$$$$$$$ | $$ |    $$ | $$ | $$ |$$ /  $$ |$$ |  \__|$$$$$$  / 
 $$ |  $$ |$$  __$$ | $$ |$$\     $$ |  $$ |$$   ____| $$ |$$\ $$ | $$ | $$ |$$ |  $$ |$$ |      $$  _$$<  
@@ -21,6 +22,7 @@ $$ |
 $$ |                                                                                                      
 \__|                                                                                                      
         </pre>
+        <img id="ascii-image" style="display:none;"/>
         <h1 id="typingText"></h1>
     </div>
     <script src="script.js"></script>
