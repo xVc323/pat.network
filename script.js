@@ -14,14 +14,3 @@ function typeWriter() {
 }
 
 typeWriter();
-
-// Convert ASCII art to image
-window.onload = () => {
-    const asciiArt = document.getElementById('ascii-art');
-    const asciiImage = document.getElementById('ascii-image');
-
-    html2canvas(asciiArt).then(canvas => {
-        asciiImage.src = canvas.toDataURL();
-        asciiImage.style.display = 'block';
-    });
-};
