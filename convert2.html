@@ -12,32 +12,45 @@
             height: 100vh;
             margin: 0;
             background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
         }
-        #playButton {
+        #downloadButton {
             padding: 20px;
             font-size: 20px;
             color: #fff;
-            background-color: #ff0000;
+            background-color: #007BFF;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            text-decoration: none;
+        }
+        #downloadButton:hover {
+            background-color: #0056b3;
         }
         #videoContainer {
             display: none;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
     </style>
 </head>
 <body>
-    <button id="playButton">Play Video</button>
+    <div>
+        <h1>Your file is ready for download!</h1>
+        <button id="downloadButton">Download DOC</button>
+    </div>
     <div id="videoContainer">
-        <iframe id="rickRollVideo" width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe id="rickRollVideo" width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <script>
-        document.getElementById('playButton').addEventListener('click', function() {
-            document.getElementById('playButton').style.display = 'none';
-            document.getElementById('videoContainer').style.display = 'block';
+        document.getElementById('downloadButton').addEventListener('click', function() {
+            document.getElementById('downloadButton').style.display = 'none';
+            document.querySelector('h1').style.display = 'none';
+            document.getElementById('videoContainer').style.display = 'flex';
             var iframe = document.getElementById('rickRollVideo');
-            iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+            iframe.src += "&autoplay=1"; // Add autoplay to the src
         });
     </script>
 </body>
